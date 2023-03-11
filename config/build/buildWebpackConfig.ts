@@ -27,5 +27,8 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
         // для того что б можно было посмотреть где в коде ошибка
         devtool: isDev ? 'inline-source-map' : undefined,
         devServer: isDev ? buildDevServer(options) : undefined,
+        performance: {
+            hints: false,
+        },
     };
 }
